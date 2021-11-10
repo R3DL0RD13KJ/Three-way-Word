@@ -73,6 +73,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Scj-Oz-9dV" appends="YES" id="ULu-gf-5tL"/>
+                                        </connections>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -85,8 +89,20 @@
                             <constraint firstItem="r4v-2h-GeY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="t64-pG-wkt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentLetter" destination="66x-Ch-iQ0" id="zcf-PD-Qzx"/>
+                        <outlet property="horizontalStackView" destination="LVd-at-jnb" id="3Dx-48-tbe"/>
+                        <outletCollection property="letterLabels" destination="fzC-Ra-uyS" collectionClass="NSMutableArray" id="wxW-O4-crN"/>
+                        <outletCollection property="letterLabels" destination="4jn-fZ-g3L" collectionClass="NSMutableArray" id="6pi-Qs-Tjv"/>
+                        <outletCollection property="letterLabels" destination="Ayx-Dl-5YM" collectionClass="NSMutableArray" id="aIa-Bc-ruV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Scj-Oz-9dV">
+                    <connections>
+                        <action selector="whenTappedAgain:" destination="BYZ-38-t0r" id="aQE-b8-6wr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="30" y="74"/>
         </scene>
